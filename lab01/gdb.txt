@@ -1,6 +1,17 @@
-1.
-2.
-3.
+
+1.While you’re in a gdb session, how do you set the arguments that will be passed to the program when it’s run?
+	 Before you run your program, set the arguments using the set args  		command followed by the arguments you want to pass.EG:
+	 "set args arg1 arg2".
+2.How do you create a breakpoint?
+	1.break filename:linenumber --set a breakpoint at a line
+	2.break function-name -- set a breakpoint on function
+	3.break [+|-] offset-number --set a breakpoint at sepcific offset from current line. 
+	4.rbreak reg-expression--Set a breakpoint on all functions matching Regular Expression.
+	5.break *instruction-address--Set a breakpoint on instruction address.
+	6.break breakpoint condition--Set a conditional breakpoint.
+	for further usage: use this website:https://www.gdbtutorial.com/gdb-breakpoints-example#breakpoint-method-1.
+3.How do you execute the next line of C code in the program after stopping at a breakpoint?
+	step |s 
 4.
 5.
 6.
