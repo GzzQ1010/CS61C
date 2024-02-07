@@ -1,9 +1,15 @@
-UNAME_S := $(shell uname -s)
+#Determines the operating system by invoking the uname -s command.
+UNAME_S := $(shell uname -s) 
+# CC: The C compiler command, set to gcc.
 CC=gcc
+#LD: The linker command, also set to gcc.
 LD=gcc
+#CFLAGS: Compiler flags for debugging, warnings, and C standard.
 CFLAGS=-ggdb -Wall -std=c99
+#LDFLAGS: Linker flags, left empty but available for specifying linker options.
 LDFLAGS=
 
+#Darwin is the core Unix operating system of macOS iOS, watchOS, tvOS, iPadOS, visionOS, and bridgeOS.
 ifeq ($(UNAME_S), Darwin)
     MEMCHECK=valgrind --tool=memcheck --leak-check=full --track-origins=yes --dsymutil=yes --suppressions=osx_vector.supp
 endif

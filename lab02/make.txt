@@ -1,4 +1,5 @@
-1.
+1.Which target is part of a rule that deletes all the compiled programs? 
+
 2.
 3.
 4.
