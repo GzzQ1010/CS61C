@@ -1,0 +1,10 @@
+1.Find the five mistakes inside the map function in megalistmanips.s. Read all of the commented lines under the map function in megalistmanips.s
+ (before it returns with jr ra), and make sure that the lines do what the comments say. Some hints:
+    a. Why do we need to save stuff on the stack before we call jal?
+    b. What’s the difference between add t0, s0, x0 and lw t0, 0(s0)?
+    c. Pay attention to the types of attributes in a struct node.
+    d. Note: you need only focus on map, mapLoop, and done functions but it’s worth understanding the full program.
+    e. Note: you may not use any s registers outside of s0 and s1.
+2.For this exercise, we are requiring that you don’t use any extra save registers in your implementation. While you normally can use the save registers to store values that you want to use after returning from a function (in this case, when we’re calling f in map), we want you to use temporary registers instead and follow their caller/callee conventions. The provided map implementation uses the s0 and s1 registers, so we’ll require that you don’t use s2-s11.
+3.Make an ordered list of each of the five mistakes, and the corrections you made to fix them.
+4.Save your corrected code in the megalistmanips.s file. Running on Venus, you should see the following output:
